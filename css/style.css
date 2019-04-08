@@ -1,0 +1,589 @@
+@charset "UTF-8";
+
+/* 文字コードを記述する（ルールである） */
+/* bodyの記述を先に書く */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #cccccc;
+  color: #333333;
+  font-style: 15px;
+  line-height: 2;
+}
+
+/* ブラウザの規定スタイルを削除する　始まり */
+/* 見出しと段落の上マージンをなくす */
+p, h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+/* 画像の株の余白をなくす */
+img {
+  vertical-align: bottom;
+}
+
+/* リスト項目の余白をなくす */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* ブラウザの規定スタイルを削除する　終わり */
+/* リストのデフォルトである下線を消す */
+a {
+  color: #3583aa;
+  text-decoration: none;
+}
+
+/* 訪問後に文字の見た目に変化を与える（ここでは色を変える） */
+a:visited {
+  color: #788d98;
+}
+
+/* カーソルが触れた時のみ、下線が現れるようにする　Hover */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Headerのスタイルを指定していく */
+/* 左右に指定するAutoは「ブラウザの幅から要素の横幅を引いた値を左右均等に分配して余白を設けるという意味 */
+/* 必ず指定する必要あり */
+/* 960pxはwebサイトの横幅の基準 */
+header {
+  width: 960px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.logo {
+  float: left;
+  margin-top: 50px;
+}
+
+.global-nav {
+  float: right;
+  margin-top: 60px;
+}
+
+.global-nav li {
+  float: right;
+  margin: 0 20px;
+  font-size: 20px;
+  list-style: none;
+  font-family: 'Bitter', serif;
+}
+
+.global-nav li a {
+  color: #ffffff;
+}
+
+.global-nav li a:hover {
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 3px;
+  text-decoration: none;
+}
+
+/* ID属性にCSSを指定する場合は、頭に＃をつける */
+/* ClearプロパティはFloatに夜要素の回り込みを解除する */
+#wrap {
+  clear: both;
+  background-color: #ffffff;
+  margin-top: 220px;
+  padding: 35px 0;
+}
+
+.content {
+  width: 960px;
+  margin: 0 auto;
+}
+
+footer {
+  text-align: center;
+  color: #ffffff;
+  padding: 20px 0;
+  background-color: #767671;
+}
+
+footer small {
+  font-size: 12px;
+}
+
+#message {
+  font-size: 95px;
+  line-height: 1;
+  color: #ffffff;
+  font-family: 'Bitter', serif;
+  border: none;
+  margin-bottom: 0;
+}
+
+#message2 {
+  font-size: 95px;
+  line-height: 1;
+  color: #ffffff;
+  font-family: 'Bitter', serif;
+  margin-bottom: 50px;
+  border: none;
+}
+
+
+#index .content {
+  margin-top: 150px;
+}
+
+#index p {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.profile-image {
+  width: 310px;
+  height: 340px;
+}
+
+.btn a {
+  background-color: #009cd3;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: 'Bitter', serif;
+  width: 185px;
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 3px solid #009cd3;
+}
+
+.btn a:hover {
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #009cd3;
+}
+
+#index footer {
+  width: 960px;
+  margin: 75px auto 0 auto;
+  text-align: left;
+  background-color: transparent;
+}
+
+#index {
+  background-image: url(../images/bg-index2.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+#about {
+  background-image: url(../images/bg-about3.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: 100% auto;
+}
+
+.main-center {
+  width: 940px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Bitter', serif;
+  font-size: 36px;
+  border-bottom: 1px solid #cccccc;
+}
+
+h2 {
+  font-family: 'Bitter', serif;
+  font-size: 24px;
+}
+
+.icon:before {
+  content: "";
+  padding-right: 10px;
+  border-left: 7px solid #9cb4a4;
+}
+
+#about .photo-description {
+  font-size: 3px;
+  float: right;
+  margin: 0 140px 0 0;
+}
+
+#about .profile {
+  margin-bottom: 50px;
+}
+
+#about .profile-txt {
+  width: 540px;
+  float: left;
+}
+
+#about .profile-image {
+  margin-top: 25px;
+  float: right;
+}
+
+#about .profile-image2 {
+  float: right;
+  height: 200px;
+  width: 310px;
+  margin-right: 0;
+}
+
+#about .profile-image3 {
+  float: right;
+  height: 180px;
+  width: 310px;
+  margin-top: 0;
+}
+
+#about .profile p {
+  text-indent: 2em;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.section {
+  margin-bottom: 35px;
+}
+
+#about .profile th {
+  width: 240px;
+  background-color: #f0f0f0;
+  padding: 12px 0;
+  border: 1px solid #cccccc;
+}
+
+#about .profile td {
+  width: 660px;
+  padding: 12px 0 12px 40px;
+  border: 1px solid #cccccc;
+}
+
+#about .career th,
+#about .it-ability th {
+  width: 240px;
+  background-color: #f0f0f0;
+  padding: 12px 0;
+  border: 1px solid #cccccc;
+}
+
+#about .career td,
+#about .it-ability td {
+  width: 660px;
+  padding: 12px 0 12px 40px;
+  border: 1px solid #cccccc;
+}
+
+#about .profile span {
+  font-weight: bold;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin-bottom: 35px;
+}
+
+#about .it-ability table {
+  margin-bottom: 0;
+}
+
+#index #wrap {
+  background-color: transparent;
+  margin-top: 0;
+  padding: 0;
+}
+
+#portfolio {
+  background-image: url(../images/bg-portfolio4.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: 100% auto;
+}
+
+#portfolio .main h2:before {
+  content: "";
+  padding-right: 10px;
+  border-left: 7px solid #9cb4a4;
+}
+
+#portfolio .show-box {
+  width: 700px;
+  height: 300px;
+  margin: 0 auto 35px auto;
+}
+
+#portfolio .box1 {
+  width: 220px;
+  height: 400px;
+  padding: 5px;
+  float: left;
+  background-color: #EEE8AA;
+  /* margin-right: 2px; */
+}
+
+#portfolio .box1 p {
+  margin-top: 17px;
+  font-size: 15px;
+}
+
+#portfolio .show-box img {
+  width: 210px;
+  height: 150px;
+  box-shadow: 3px 3px;
+}
+
+
+.main {
+  width: 700px;
+  margin: 0 auto;
+  float: left;
+}
+
+.sidebar {
+  width: 200px;
+  margin: 0 10px 0 30px;
+  float: right;
+  font-family: 'Bitter', serif;
+}
+
+.sidebar h2 {
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.sidebar ul a {
+  color: #333333;
+}
+
+a img:hover {
+  opacity: 0.8;
+}
+
+#photograph {
+  background-image: url(../images/bg-photograph.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: 100% auto;
+}
+
+#photograph .photograph-list li {
+  list-style: none;
+  float: left;
+  margin: 0 20px 15px 0;
+}
+
+#photograph .photograph-list li:nth-child(3n) {
+  margin-right: 0;
+}
+
+#video {
+  background-image: url(../images/bg-video.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: 100% auto;
+}
+
+#contact {
+  background-image: url(../images/bg-photograph.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: 100% auto;
+}
+
+#contact .access table {
+  float: left;
+}
+
+#contact .access th,
+#contact .access td {
+  text-align: left;
+  vertical-align: top;
+  line-height: 2.5;
+}
+
+#contact .access td {
+  padding-left: 30px;
+}
+
+#contact .access iframe {
+  width: 460px;
+  float: right;
+}
+
+#contact .form {
+  background-color: #eaeaea;
+  padding: 30px 50px;
+}
+
+#contact .form dl dt {
+  width: 165px;
+  padding: 10px 0;
+  float: left;
+  clear: both;
+}
+
+#contact .form dl dd {
+  padding: 10px 0;
+}
+
+#contact .form [name="name"] {
+  width: 240px;
+  height: 30px;
+}
+
+#contact .form [name="email"] {
+  width: 300px;
+  height: 30px;
+}
+
+#contact .form [name="tel"] {
+  width: 240px;
+  height: 30px;
+}
+
+#contact .form [name="type"] {
+  width: 180px;
+  height: 30px;
+}
+
+#contact .form [name="message"] {
+  width: 660px;
+  height: 150px;
+}
+
+#contact .form button {
+  background-color: #009cd3;
+  color: #ffffff;
+  font-size: 20px;
+  width: 120px;
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 5px;
+  border: 3px solid #009cd3;
+  margin-left: 165px;
+}
+
+#contact .form button:hover {
+  background-color: #ffffff;
+  color: #009cd3;
+  cursor: pointer;
+}
+
+#contact .form .required:after {
+  content: "*";
+  color: #ff0000;
+}
+
+#contact .form .attention {
+  margin: 20px 0 0 165px;
+}
+
+#pagetop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 77%;
+}
+#pagetop a {
+    background: #666;
+    text-decoration: none;
+    color: #fff;
+    width: 100px;
+    padding: 30px 0;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+}
+#pagetop a:hover {
+    text-decoration: none;
+    background: #999;
+}
+
+/* レスポンシブ目的（画面サイズが600px以下の場合に適用）のメディアクエリを記載 */
+@media screen and (max-width:600px) {
+  body {
+    font-size: 3.5vw;
+  }
+
+  h1 {
+    font-size: 7.2vw;
+  }
+
+  h2 {
+    font-size: 6vw;
+  }
+
+  header {
+    width: auto;
+    margin: 0 5%;
+  }
+
+  logo {
+    float: none;
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  global-nav {
+    float: none;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  global-nav li {
+    display: inline;
+    float: none;
+    margin: 0 8px;
+  }
+
+  #wrap, .content, .main-center, .main, .main-center > section {
+    float: none;
+    width: 100%;
+  }
+
+  #wrap {
+    margin-top: 40px;
+    padding: 25px 0 0;
+  }
+
+  .main {
+    float: none;
+X    width: auto;
+    margin: 0 5%;
+  }
+
+  h2 img {
+    max-width: 100%;
+  }
+
+  #portfolio {
+    background-image: url(images/bg-portfolio-sp.jpg);
+  }
+
+  .sidebar {
+    width: auto;
+    float: none;
+    margin: 0;
+    padding: 30px 10% 10px;
+    background-color: #f7f6f4;
+  }
+}
